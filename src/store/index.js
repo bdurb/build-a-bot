@@ -11,5 +11,10 @@ export default new Vuex.Store({
     addRobotToCart(state, robot) {
       state.cart.push(robot)
     }
+  },
+  getters: {
+    cartSaleItems(state) {
+      return state.cart.filter(item => item.head.onSale)
+    }
   }
 })
