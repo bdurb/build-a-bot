@@ -2,13 +2,11 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to Cart</button>  
     <div class="top-row">
-      <div class="top part" :style="headBorderStyle">
         <!-- <div class="robot-name">
           {{ selectedRobot.head.title }}
           <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
         </div> -->
         <PartSelector :parts="availableParts.heads" position="top" />
-      </div>
     </div>
     <div class="middle-row">
       <PartSelector :parts="availableParts.arms" position="left" />
@@ -172,9 +170,7 @@ export default {
   text-align: center;
   width: 100%;
 }
-.sale {
-  color: red;
-}
+
 .content {
   position: relative;
 }
