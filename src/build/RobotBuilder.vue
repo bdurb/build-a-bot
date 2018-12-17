@@ -94,8 +94,12 @@ export default {
   methods: {
     addToCart() {
       const robot = this.selectedRobot
-      const cost = robot.head.cost + robot.leftArm.cost + robot.torso.cost + robot.rightArm.cost + robot.base.cost
-      this.cart.push(Object.assign({}, robot, { cost }))
+      const cost = robot.head.cost +
+        robot.leftArm.cost +
+        robot.torso.cost +
+        robot.rightArm.cost +
+        robot.base.cost
+      this.$store.commit('addRobotToCart', Object.assign({}, robot, { cost }))
       this.addedtoCart = true
     }
   }
