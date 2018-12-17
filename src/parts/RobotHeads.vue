@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import parts from '../data/parts';
+import parts from '../data/parts'
 export default {
   name: 'RobotHeads',
   data() {
-    return { heads: parts.heads };
+    return { heads: parts.heads }
   },
 };
 </script>
