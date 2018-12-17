@@ -12,6 +12,12 @@ export default new Vuex.Store({
       state.cart.push(robot)
     }
   },
+  // you pass in context into the actions, which can be deconstructed.
+  actions: {
+    getParts({ commit }) {
+      
+    }
+  },
   getters: {
     cartSaleItems(state) {
       return state.cart.filter(item => item.head.onSale)
