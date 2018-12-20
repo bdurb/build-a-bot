@@ -4,9 +4,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import pinDirective from './shared/pin-directive'
+import currentyFilter from './shared/currency-filter'
 
 Vue.config.productionTip = false
 Vue.directive('pin', pinDirective)
+Vue.filter('currency', currentyFilter)
 
 new Vue({
   render: h => h(App),
